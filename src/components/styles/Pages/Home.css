@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@600&family=Roboto+Mono:wght@500&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+#home {
+  height: 100vh;
+
+
+  /* border: .001px solid green; */
+  /* display:flex;
+    flex-direction:column;
+    align-items:center; */
+  text-align: center;
+}
+
+a {
+  color: #ffffff;
+}
+
+#card-list-header-text {
+  color: #ffffff;
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 29px;
+  margin-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: underline;
+  
+}
+
+#list-container {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+  
+}
+#list-container2 {
+display: none;
+  
+}
+@media screen and (max-width: 978px) {
+  #list-container2 {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    
+  }
+  #list-container {
+  display: none;
+    
+  }
+  
+  #card-list-header-text {
+  color: #ffffff;
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 24px;
+  margin-top: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+}

@@ -1,0 +1,23 @@
+
+@media screen and (max-width: 978px) {
+    #dash-respo2{
+       
+        margin-top:50px
+    }
+#dash-respo{
+   
+    display:none;
+}
+
+}
+
+@media screen and (min-width: 978px) {
+ 
+    #dash-respo2{
+        display:none;
+    }
+
+    .navDisplay{
+        display:none;
+    }
+    }
