@@ -21,7 +21,6 @@ const CreateNft= () => {
     handleSubmit,
   } = useForm();
   const [, setLoading] = useState(false)
-
   const pinOnIpfs = async (file) => {
     
   try {
@@ -95,59 +94,41 @@ const handleSendNFT = async () => {
 }
 
 
-  return(<>
-
-  
+  return(
+  <>
     <Container className="cont-first" color="white" borderRadius="0.5rem" mt={["50px","80px","140px" ]}boxShadow='white-lg' width={["xs", 'md', "2xl" ] }>
-  
-  <form onSubmit={handleSubmit(handleSendNFT)} className="contact-form">
-    
-    <FormControl isRequired mt="18px" mb="15px" >
-  <FormLabel htmlFor='title'>Title Of The NFT : </FormLabel>
-  <Input  id='title' placeholder='Title Nft '  {...register('title')}  />
-</FormControl>
-    <FormControl isRequired mt="18px" mb="15px">
-  <FormLabel htmlFor='Author'>Artiste Name : </FormLabel>
-  <Input id='Author' placeholder='Artiste Name' {...register('author')} />
-</FormControl>
-<FormControl isRequired mt="22px" mb="15px">
-  <FormLabel htmlFor='Description'>Description : </FormLabel>
-  <Textarea placeholder='Here is a sample placeholder' {...register('description')} />
-</FormControl>
+      <form onSubmit={handleSubmit(handleSendNFT)} className="contact-form">  
+        <FormControl isRequired mt="18px" mb="15px" >
+          <FormLabel htmlFor='title'>Title Of The NFT : </FormLabel>
+          <Input  id='title' placeholder='Title Nft '  {...register('title')}  />
+        </FormControl>
+        <FormControl isRequired mt="18px" mb="15px">
+          <FormLabel htmlFor='Author'>Artiste Name : </FormLabel>
+          <Input id='Author' placeholder='Artiste Name' {...register('author')} />
+        </FormControl>
+        <FormControl isRequired mt="22px" mb="15px">
+          <FormLabel htmlFor='Description'>Description : </FormLabel>
+          <Textarea placeholder='Here is a sample placeholder' {...register('description')} />
+        </FormControl>
+        <FormControl isRequired mt="18px" mb="15px">
+          <FormLabel htmlFor='types'>Type : </FormLabel>
+          <Select id="types" placeholder='Select a type' {...register('types')}>
+          <option value='image'>Image</option>
+          <option value='video'>Video</option>
+          <option value='ar/vr'>AR/VR</option>
+          </Select>
+        </FormControl>
+        <FormControl isRequired mt="18px" mb="15px">
+          <FormLabel htmlFor='file'>Upload Your File : </FormLabel>
+          <Input  type="file" id='file' placeholder='Upload Your File' accept='image/*, video/*, application/pdf,' {...register('file')}/>
+        </FormControl>
 
-<FormControl isRequired mt="18px" mb="15px">
-  <FormLabel htmlFor='types'>Type : </FormLabel>
-  <Select id="types" placeholder='Select a type' {...register('types')}>
-  <option value='image'>Image</option>
-  <option value='video'>Video</option>
-  <option value='ar/vr'>AR/VR</option>
-  </Select>
-</FormControl>
-
-<FormControl isRequired mt="18px" mb="15px">
-<FormLabel htmlFor='file'>Upload Your File : </FormLabel>
-  <Input  type="file" id='file' placeholder='Upload Your File' accept='image/*, video/*, application/pdf,' {...register('file')}/>
-</FormControl>
-
-<Center mt="18px" mb="11px">
-<Button onClick={handleSendNFT}  className="create-button" mr={3}>
-      Create
-    </Button>
-    </Center>
-  
-</form>
-
-
-</Container>
-
-
-
-</>
-  );
+        <Center mt="18px" mb="11px">
+        <Button onClick={handleSendNFT}  className="create-button" mr={3}>Create</Button>
+        </Center>
+      </form>
+    </Container>
+  </>
+);
 };
-
-
-
-
-
 export default CreateNft;

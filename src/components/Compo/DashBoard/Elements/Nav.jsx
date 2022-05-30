@@ -1,59 +1,50 @@
 
 import React from 'react'
-import { Box, Button,SimpleGrid, Slide, useDisclosure } from '@chakra-ui/react'
+import {Button,Center,Drawer,DrawerBody,DrawerCloseButton,DrawerContent,DrawerFooter,DrawerHeader,DrawerOverlay,Icon,SimpleGrid, useDisclosure } from '@chakra-ui/react'
 import { Link } from "react-router-dom";
 import '../../../styles/Component/NavBar.css'
-import { Controls, Player } from '@lottiefiles/react-lottie-player';
+import {BsChevronDoubleRight} from 'react-icons/bs'
 
-const NavDash = ({src}) => {
+const NavDash = () => {
     //https://assets5.lottiefiles.com/packages/lf20_ckoeqyjs.json
-    const { isOpen, onToggle, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
 return (
 // eslint-disable-next-line
-<><a bg="dark" onClick={onToggle}>
-
-
-<Player
-    id="anime"
-  autoplay
-  loop
-  src={src}
-  style={{ height: 'auto', width: 'auto' }}
-  
->
-  <Controls visible={false}  />
-</Player>
-</a>
-<Slide direction='bottom' in={isOpen} style={{ zIndex: 10 }}>
-  <Box
-    p='40px'
-    color='#aac792'
-    mt='4'
-    bg='#06150aa6;'
-    rounded='md'
-    shadow='md'
+<>
+  <Icon bg='transparent' color='white' w={8} h={8} ml="-7px" ref={btnRef} onClick={onOpen}>
+    <BsChevronDoubleRight/>
+  </Icon>
+  <Drawer
+    isOpen={isOpen}
+    placement='left'
     onClose={onClose}
+    finalFocusRef={btnRef}
   >
-  <SimpleGrid column={5}>
+  <DrawerOverlay />
+  <DrawerContent background="#030003"  color="#a6ae74">
+    <DrawerCloseButton />
+    <DrawerHeader>DahBoard Navigation</DrawerHeader>
+    <DrawerBody>
+      <Center>
+      <SimpleGrid column={1} >
+        <Link to='/dashboard' id='nav-dash'>Dashboard</Link>
+        <Link to='/create' id='nav-dash'>Create Your Own Nft</Link>
+        <Link to='/listing' id='nav-dash'>List On MarketPlace</Link>
+        <Link to='/transfert' id='nav-dash'>transfert Your Nft</Link>
+      </SimpleGrid>
+      </Center>
+    </DrawerBody>
 
+    <DrawerFooter id='footer-nav'>
+      <Button variant='outline' mr={3} onClick={onClose}>
+        Close
+      </Button>
+    </DrawerFooter>
 
-       <Link to='/dashboard' id='nav-dash'>Dashboard</Link>
-     <Link to='/create' id='nav-dash'>Create Your Own Nft</Link>
-  <Link to='/listing' id='nav-dash'>List On MarketPlace</Link>
-  <Link to='/transfert' id='nav-dash'>transfert Your Nft</Link>
- 
- 
-  <Button variant='unstyled' mr="30px" onClick={onClose}>
-              Close
-            </Button>
-  </SimpleGrid>
-  
-
-  </Box>
-</Slide>
-        
-
-          </>
+  </DrawerContent>
+  </Drawer>
+</>
 )
 } 
 export default NavDash;

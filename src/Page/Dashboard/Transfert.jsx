@@ -1,28 +1,19 @@
 import {DesktopRoot } from "../../components/styles/Pages/Deskroot"
-import { Center } from '@chakra-ui/react';
 import "../../components/styles/Pages/Transfer.css"
 import DashTransfert from "../../components/Compo/DashBoard/DashTransfert";
+import { Center } from "@chakra-ui/react";
 
 const Transfert = () => {
 
-    return (
-
-<div id="transfert">
+return (
+    <div id="transfert">
     <DesktopRoot>
-
-        <p id="form-list-header-text">  <Center as="u" mt="80px" size="28px">Transfert You Nft To External or friends wallet   </Center></p>
-
-        <div id="form-container">
+    <div id="transfert-list-header-text">  <Center  mt="150px" size="28px">Transfert your Nft to an external wallet or to a present for a friend </Center></div>
             <DashTransfert/>
-        </div>  
-
+     
     </DesktopRoot>
-</div>
-
-
-
-    
-    );
+    </div>
+);
 }
 
 export default Transfert;

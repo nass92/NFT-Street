@@ -6,17 +6,12 @@ import Expo from "../components/Compo/Exposition";
 const Explore = () => {
 
   return (
-
- <div id="explore">
-  <DesktopRoot>
-
-    <p id="expo-list-header-text">  <Center as="u" mt="30px" size="28px">Explore all Nft of Our Community </Center></p>
-
-    <Expo/>
-
- </DesktopRoot>
-</div>
-
+  <div id="explore">
+    <DesktopRoot>
+      <div id="expo-list-header-text">  <Center mt="150px" size="28px">Explore all Nft of Our Community </Center></div>
+        <Expo/>
+    </DesktopRoot>
+  </div>
   );
 };
 

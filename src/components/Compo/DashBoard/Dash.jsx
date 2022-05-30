@@ -5,30 +5,28 @@ import NavDash from './Elements/Nav';
 import CoinMarket from './Elements/pricemarket/Coin';
 import "../../styles/DashBoard/Dash.css"
 
-const Dash = ({nft}) => {
+const Dash = () => {
   
 return (
-
-
-<Grid mt="70px"
- mr="30px"
-  templateRows='repeat(1, 1fr)'
-  templateColumns='repeat(5, 1fr)'
-
- 
+<Grid 
+  templateColumns='repeat(6, 1fr)'
 >
- <GridItem rowSpan={1} colSpan={1} bg='#000000' mt="150px" ><NavDash src="https://assets3.lottiefiles.com/packages/lf20_ckoeqyjs.json"/> <NavDash  src="https://assets3.lottiefiles.com/packages/lf20_ckoeqyjs.json"/></GridItem>
-  <GridItem colSpan={[4,4,2]} bg='#000000' mt="25px"  ml={["0px", "25px", "0px"]}  border="30px"boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"><DashNft /></GridItem>
+  <div className='navDash'>
+    <GridItem colSpan={1} mt="150px" rowSpan={1}bg='transparent'><NavDash/></GridItem>
+  </div>
 
- <GridItem className="navDisplay" rowSpan={1} colSpan={1} bg='#000000' mt="350px" ><NavDash src="https://assets3.lottiefiles.com/packages/lf20_ckoeqyjs.json"/> <NavDash  src="https://assets3.lottiefiles.com/packages/lf20_ckoeqyjs.json"/></GridItem>
-  <GridItem  colSpan={[4,4,2]} bg='#000000' mt="25px" ml={["30px", "25px", "0px"]}   border="30px" boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" > <InfoWallet/></GridItem>
-  <GridItem className="navDisplay" rowSpan={1} colSpan={1} bg='#000000' mt="-150px" ><NavDash src="https://assets3.lottiefiles.com/packages/lf20_ckoeqyjs.json"/> <NavDash  src="https://assets3.lottiefiles.com/packages/lf20_ckoeqyjs.json"/></GridItem>
-<GridItem colSpan={[4,4,2]} bg='#000000' mt={["10px", "20px", "50px"]} ml={["0px", "0px", "200px"]} mr={["0px", "20px", "-280px"]}  ><CoinMarket/> </GridItem>
-  <GridItem colSpan={[4,4,2]} bg='#000000' mt={["10px", "20px", "40px"]} ml={["60px", "40px", "350px"]}  >
-<NavDash src="https://assets7.lottiefiles.com/temp/lf20_VqPWzx.json"/>
-</GridItem>
+  <GridItem colSpan={[5,3,3]} bg='transparent' mt="150px"  ml={["60px", "25px", "50px","50px","100px","100px"]}  >
+    <DashNft />
+  </GridItem>
+
+  <GridItem  colSpan={[5,3,3]} bg='transparent' mt="150px" ml={["60px", "25px",  "50px","50px","0px","0px"]} > 
+   <InfoWallet/>
+  </GridItem>
+
+  <GridItem colSpan={[5,4,5]} bg='transparent' mt={["10px", "20px", "50px"]} ml={["80px", "150px",  "250px","450px","550px","550px"]} >
+   <CoinMarket/> 
+  </GridItem>
 </Grid>
-
 )
 }
 

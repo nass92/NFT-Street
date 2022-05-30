@@ -4,8 +4,8 @@ import "../../styles/Elemente-style/Card.css";
 const Card = React.forwardRef(
   (
     {
-      width = "250px",
-      height = "300px",
+      width = "auto",
+      height ="auto",
       child,
       blurColor = "rgba(48,118,234,0.2)",
       onClick,

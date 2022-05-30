@@ -12,8 +12,10 @@ align-items: center;
 
 
 .coin-input {
+  margin-top: 45px;
   padding-left: 16px;
-  width: 300px; 
+  width:100%;
+  max-width: 500px; 
   height: 50px;
   border-radius: 4px;
   border: none;

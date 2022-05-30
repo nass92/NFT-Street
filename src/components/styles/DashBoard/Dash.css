@@ -1,23 +1,12 @@
 
-@media screen and (max-width: 978px) {
-    #dash-respo2{
-       
-        margin-top:50px
-    }
-#dash-respo{
-   
-    display:none;
+.navDash{
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-}
 
-@media screen and (min-width: 978px) {
- 
-    #dash-respo2{
-        display:none;
-    }
 
-    .navDisplay{
-        display:none;
-    }
-    }

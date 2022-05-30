@@ -6,20 +6,13 @@ import Expo from "../components/Compo/Exposition";
 const Home = () => {
 
     return (
-      
-      <div id="home">
-          <DesktopRoot>
-            <Header/>
-
-            <p id="card-list-header-text">  <Center>Last Creation</Center></p>
-      
-            <Expo/>
-    
+    <div id="home">
+      <DesktopRoot>
+        <Header/>
+        <p id="card-list-header-text">  <Center>Last Creation</Center></p>
+        <Expo/>
       </DesktopRoot>
     </div>
-  
-
-    
     );
 }
 

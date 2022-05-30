@@ -1,5 +1,5 @@
 
-import {Container, SimpleGrid, Heading, Center, Button, Spacer} from "@chakra-ui/react"
+import { Heading, Center, Button, Grid, GridItem, Box, Container} from "@chakra-ui/react"
 import { DappContext } from "../../../../Dapp"; 
 import { useState, useEffect, useContext } from "react"
 import { Web3Context } from "web3-hooks";
@@ -49,32 +49,36 @@ const DashNft = () => {
   }, [Create, web3State])
 console.log("expo" , galery)
 
-  return(<>
-  
-<Container mt="60px">
-<Heading as="u"  color="#ffffff">Your Last Creation</Heading>
+  return(
+  <>
+   <Container maxW='lg' maxh='md'  p={4} borderRadius="1rem" boxShadow="rgba(100, 100, 111, 0.2) 10px 17px 29px 7px" >
 
-      <SimpleGrid columns={[1, 1, 1]} mt="80px" >
+<Center color="#ffffff">
+  <Heading fs="85px">Your Last Creation </Heading>
+</Center>
+
+    
+      <Grid columns='repeat(2)'  >
         {galery.map((el, index) => {
-          return <NFTCard  key={index} nft={el} ></NFTCard>
+          return (<>
+          <GridItem colSpan={[2,2]}>
+          <NFTCard  key={index} nft={el} ></NFTCard>
+          </GridItem>
+
+          <GridItem colSpan={[2,2,1]} mt={["-55px",null,'0px']} >
+          <Link to="/listing" > <Center> <Button  fontWeight="bold" >DashListing  </Button></Center> </Link>
+          </GridItem>
+
+          <GridItem colSpan={[2,2,1]}  >
+          <Link to="/transfert"> <Center><Button  >DashTransfer</Button></Center></Link>
+          </GridItem>
+          </>
+        )
         })}
-      </SimpleGrid>
-     
-
-      <Center mt={['170px', '120px', '90px']}  >
-      <Link to="/listing" >       <Button   fontWeight="bold" ml={['100px', '25px', '0px']}>DashListing  </Button> </Link>
-
-                  <Spacer />      
-         <Link to="/transfert"> <Button mr={['100px', '25px', '0px']} >DashTransfer</Button></Link>
-               
-
-                </Center>
-
-
-
-      </Container>
- 
-    </>
+      </Grid>
+    
+    </Container>
+  </>
 )
   
 } 

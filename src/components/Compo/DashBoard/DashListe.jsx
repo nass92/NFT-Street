@@ -1,55 +1,30 @@
-import { Box,  Center,  Grid, GridItem } from '@chakra-ui/react'
+import { Center, Grid, GridItem } from '@chakra-ui/react'
 import NavDash from "../DashBoard/Elements/Nav"
 import "../../styles/DashBoard/Dash.css"
 import DashNftListing from './Elements/DashNftListing'
 
 const Dashliste = () => {
   
-return (<>
+return(<>
+  <Grid 
+    templateRows='repeat(1, 1fr)'
+    templateColumns='repeat(5, 1fr)'
+    gap={4}
+  > 
+    <div className='navDash'>
+      <GridItem colSpan={1} mt={["450px",'400px','350px']} bg='transparent'> 
+      <NavDash/>
+      </GridItem>
+    </div>
+    
+    <GridItem colSpan={4} mt={["150px","100px","75px"]} ml={["50px","100px","100px"]}>
+      <Center>
+        <DashNftListing/>
+      </Center>
+    </GridItem>
 
-  <div id="dash-list" >
-
-<Grid
-  templateRows='repeat(1, 1fr)'
-  templateColumns='repeat(5, 1fr)'
-  gap={4}
-
- mt="50px"
-> 
-
- 
-
-  <GridItem rowSpan={1} colSpan={1} >
-  <Center>
-  <Box maxW='md' mt="250px" ml={["0px", "20px", "150px"]}  > 
-
-  <NavDash src="https://assets5.lottiefiles.com/temp/lf20_ujod0D.json" />
-  </Box>
-  </Center>
-
-  </GridItem>
-
-  <GridItem colSpan={4} >
-  <Box  color='white' ml={['0px', '70px', '100px']} mt="35px">
-  <Center>
-  <DashNftListing/>
-  </Center>
-
-  
-  </Box>
-
-  </GridItem>
-
-
-</Grid>
-
-
-
-
-</div>
-
-
-</>
+  </Grid>
+  </>
 )
 }
 

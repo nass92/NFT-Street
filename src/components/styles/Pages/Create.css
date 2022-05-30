@@ -15,11 +15,13 @@ a {
 
 #form-list-header-text {
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
-  font-size: 55px;
-  margin-top: 80px;
-  padding-top: 20px;
- 
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 #form-container {

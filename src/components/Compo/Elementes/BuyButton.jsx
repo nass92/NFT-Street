@@ -53,14 +53,8 @@ const Buy = ({nft}) => {
     }
   }
 
- 
-
   return (
-
-      <Button color="dark"  onClick={handleBuyButton}  >Buy Now</Button>
-          
-       
+    <Button color="dark"  onClick={handleBuyButton}  >Buy Now</Button>
   )
 }
-
 export default Buy

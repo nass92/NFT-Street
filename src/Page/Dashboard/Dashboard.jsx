@@ -5,15 +5,9 @@ import Dash from '../../components/Compo/DashBoard/Dash';
 
 const Dashboard = () => {
   return (
-
- 
  <div id="dashboard">
   <DesktopRoot>
-
-    <p id="dash-list-header-text ">  </p>
-
-    <Dash/>
-
+      <Dash/>
   </DesktopRoot>
 </div>
 

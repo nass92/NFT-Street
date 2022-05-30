@@ -36,7 +36,6 @@ function Login({ title, desc, ...rest }) {
             <Text>You can not log out from a Dapp.</Text>
             <Text>If you want to log out of this website, do it directly from MetaMask.</Text>
           </ModalBody>
-
           <ModalFooter>
             <Button colorScheme="teal" mr={3} onClick={onCloseLogoutModal}>
               Close
@@ -44,19 +43,12 @@ function Login({ title, desc, ...rest }) {
           </ModalFooter>
         </ModalContent>
       </Modal>
-
-        <Button
-        id="connect-wallet" 
-          onClick={() => (!web3State.isLogged ? handleClickLogin() : onOpenLogoutModal())}
-        >
-          {!web3State.isLogged ? "Log in" : web3State.chainId === 4 ?
-            web3State.account.split("").splice(0, 6).join("") + "..." +
-            web3State.account.split("").splice(-4).join("") : (<p style={{ color: "red" }}>WRONG NETWORK</p>)}
-        </Button>
-      
-
-      
-          
+      <Button id="connect-wallet" onClick={() => (!web3State.isLogged ? handleClickLogin() : onOpenLogoutModal())} >
+        {!web3State.isLogged ? "Log in" : web3State.chainId === 4 ?
+          web3State.account.split("").splice(0, 6).join("") + "..." +
+          web3State.account.split("").splice(-4).join("") : (<p style={{ color: "red" }}>WRONG NETWORK</p>)
+        }
+      </Button>    
     </>
   );
 }

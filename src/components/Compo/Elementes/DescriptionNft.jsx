@@ -19,7 +19,6 @@ import {
     return (
       <>
         <Button onClick={onOpen}>Description</Button>
-  
         <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
@@ -41,6 +40,6 @@ import {
           </ModalContent>
         </Modal>
       </>
-    )
-  }
+  )
+}
   export default DescriptionModal;

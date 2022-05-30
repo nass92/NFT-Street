@@ -50,23 +50,15 @@ console.log("expo" , transfert)
 
   return(<>
   <div id="dash-nft-list">
-
-
-
       <SimpleGrid columns={[1, 1, 2,3,4]} mt="80px" gap={4} >
         {transfert.map((el, index) => {
-
           return(
             <Container  borderRadius="1.25rem"   border="30px" boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px">  
-             <NFTCard  key={index} nft={el} button={<ListingButton nft={el}/>} ></NFTCard>
+               <NFTCard  key={index} nft={el} button={<ListingButton nft={el}/>} ></NFTCard>
             </Container>      
           )
         })}
       </SimpleGrid>
-
-
-
-
     </div>
     </>
 )

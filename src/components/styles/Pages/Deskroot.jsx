@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 
 export const DesktopRoot = styled.body`
-  background-color: #000000;
+background-image: linear-gradient(to top, #000000, #1e171c, #2c2938, #2d3f56, #1d586f, #1d586f, #1d586f, #1d586f, #2d3f56, #2c2938, #1e171c, #000000);
   margin: 0;
   padding: 0;
  heiht: 100%;

@@ -5,39 +5,21 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { ethers } from "ethers";
 import Card from "./Card";
 
-
 const NFTCard = ({ nft, button}) => {
 
   const [isLike, setIsLike] = useState(false);
-  const [colors] = useState([]);
-
-  const isARSupport = nft.types==='ar/vr';
-
-
+  const [colors,] = useState([]);
   const like = () => setIsLike(!isLike);
-
-
-
-
-
-
 
   return (
     <div id="card-list" >
     <Card
       blurColor={colors[0]}
 
-      child={<>
+      child={
+      <>
+        { nft.types === 'image' ? <img src={nft.uri} alt={nft.title} className="nft-image" type="image" /> : (<video controls src={nft.uri} alt={nft.title} className="nft-image"  type ="video/mp4"  />)}
     
-         
-
-  {isARSupport ? <model-viewer ar-scale="auto" ar ar-modes="webxr scene-viewer quick-look" id="reveal" loading="eager" camera-controls auto-rotate src={nft.uri} > </model-viewer> : 
-  nft.types === 'image' ? <img src={nft.uri} alt={nft.title} className="img" type="image" /> : (<video controls src={nft.uri} alt={nft.title} className="video"  type ="video/mp4"  />)}
-        
-
-
-    
-
         <div className="wrapper">
           <div className="info-container">
             <p className="owner"> {nft.author}</p>
@@ -56,7 +38,6 @@ const NFTCard = ({ nft, button}) => {
           {/* <button className="buy-now">Buy Now</button> */}
           {/*nft.forSell ? <Buy nft={nft} /> : <DescriptionModal nft={nft}/> */}
           {button}
-     
           <div className="like-container">
             <button className="like" onClick={like}>
               {!isLike ? (
@@ -73,12 +54,11 @@ const NFTCard = ({ nft, button}) => {
             </button>
             <p className="like-count">123</p>
           </div>
-        </div>
-        
+        </div> 
       </>}>
-
     </Card>
-    </div> );
+    </div> 
+  );
 };
 
 export default NFTCard;

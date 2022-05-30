@@ -5,8 +5,8 @@ import '../../../styles/Component/NavBar.css'
 import { Controls, Player } from '@lottiefiles/react-lottie-player';
 
 const NavDash2 = () => {
-    //https://assets5.lottiefiles.com/packages/lf20_ckoeqyjs.json
-    const { isOpen, onToggle, onClose } = useDisclosure()
+  
+  const { isOpen, onToggle, onClose } = useDisclosure()
 return (
   // eslint-disable-next-line
 <><a bg="dark" onClick={onToggle}>
