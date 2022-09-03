@@ -1,4 +1,4 @@
-import { Center, GridItem, SimpleGrid, Text } from "@chakra-ui/react";
+import {  GridItem, SimpleGrid, Text } from "@chakra-ui/react";
 import React, { useState, useContext, useEffect } from "react";
 import { Web3Context } from "web3-hooks";
 import { DappContext } from '../../Dapp'
@@ -23,6 +23,7 @@ const Mkt = () => {
 
         for(let i = 0; i <= totalSelling.toString(); i++ ) {
             const nft =await Create.getNMById(i)
+            const url = await Create.tokenURI(i)
             const sell = await Create.isForSell(i)
             const price = await Create.getPrice(i)
             console.log('ee',sell)
@@ -32,7 +33,7 @@ const Mkt = () => {
                 author: nft.author,
                 description: nft.description,
                 types: nft.types,
-                uri: nft.uri,
+                uri:url,
                 forSell: nft.forSell,
                 id: i,
                 price: price,

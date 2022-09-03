@@ -29,6 +29,7 @@ import {
                Description by the author of this Nft
               </Text>
              {nft.description}
+             
             </ModalBody>
   
             <ModalFooter>

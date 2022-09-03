@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, SimpleGrid, useDisclosure } from '@chakra-ui/react'
+import {  SimpleGrid, useDisclosure } from '@chakra-ui/react'
 import { Link } from "react-router-dom";
 import Login from "./Elementes/Loguin";
 import {
@@ -28,8 +28,8 @@ const NavBar = () => {
       <div id="link-containers">
 
       <Link to='/' id='logo'>Home</Link>
-      <Link to='/exposition' id='logo'>Exposition</Link>
-      <Link to='/marketplace' id='logo'>MarketPlace</Link>
+      <Link to='/exposition' id='logo'>See & Buy</Link>
+      
       <Link to='/dashboard' id='logo'>Dashboard</Link>
       <Login id='logo'/>
       </div>

@@ -1,5 +1,5 @@
 
-import { Heading, Center, Button, Grid, GridItem, Box, Container} from "@chakra-ui/react"
+import { Heading, Center, Button, Grid, GridItem, Container} from "@chakra-ui/react"
 import { DappContext } from "../../../../Dapp"; 
 import { useState, useEffect, useContext } from "react"
 import { Web3Context } from "web3-hooks";

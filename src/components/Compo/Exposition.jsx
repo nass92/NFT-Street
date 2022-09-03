@@ -26,13 +26,14 @@ const Expo = () => {
 
         for(let i = 0; i < totalSupply.toString(); i++ ) {
             const nft = await Create.getNMById(i)
+            const url = await Create.tokenURI(i)
             const price = await Create.getPrice(i)
            if(nft.types==='image'){image.push({
             title: nft.title,
             author: nft.author,
             description: nft.description,
             types: nft.types,
-            uri: nft.uri,
+            uri:url,
             forSell: nft.forSell,
             price: price,
             id: i,
@@ -42,7 +43,7 @@ const Expo = () => {
                 author: nft.author,
                 description: nft.description,
                 types: nft.types,
-                uri: nft.uri,
+                uri: url,
                 forSell: nft.forSell,
                 price: price,
                 id: i,
@@ -50,7 +51,7 @@ const Expo = () => {
 
             }
             console.log(nft)
-            console.log(nft.uri)
+            console.log(url)
       }
       setExpo(image);
       setExpo2(video)
